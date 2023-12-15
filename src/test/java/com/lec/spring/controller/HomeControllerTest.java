@@ -24,6 +24,6 @@ class HomeControllerTest {
         ResponseEntity<String> response =  restTemplate.getForEntity("/aws/v2", String.class);
 
         // "<h1>AWS 배포 v1 </h1>" 와 같아야 통과 (한글자라도 틀리면 테스트 페일)
-        assertEquals("<h1>AWS 배포 v2 </h1>", response.getBody());
+        assertEquals("<h1>AWS 배포 v2 </h1>\n<h1>AWS 배포 v2 </h1>", response.getBody());
     }
 }
